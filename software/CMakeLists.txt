@@ -27,11 +27,16 @@ INCLUDE_DIRECTORIES(
 # find source files
 SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/main.c"
+	"${PROJECT_SOURCE_DIR}/src/driver.c"
 
-	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/tng_init.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/tng.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/uartbb/uartbb.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/system_timer/system_timer.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/startup/startup_stm32f0.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/startup/startup_stm32f072xb.S"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/os/coop_task.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/os/coop_task_pendsv_handler.S"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/logging/logging.c"
 
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c"

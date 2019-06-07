@@ -22,11 +22,15 @@
 #ifndef CONFIG_GENERAL_H
 #define CONFIG_GENERAL_H
 
+#define SYSTEM_TIMER_IS_RAMFUNC
 #define SYSTEM_TIMER_FREQUENCY 1000 // Use 1 kHz system timer
 
 #define FIRMWARE_VERSION_MAJOR 1
 #define FIRMWARE_VERSION_MINOR 0
 #define FIRMWARE_VERSION_REVISION 0
+
+#define UARTBB_TX_PIN GPIO_PIN_13
+#define UARTBB_TX_PORTC
 
 #include "stm32f0xx_hal.h"
 

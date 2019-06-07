@@ -1,7 +1,7 @@
-/* tng-di8
+/* tng-di8-bricklet
  * Copyright (C) 2019 Olaf Lüke <olaf@tinkerforge.com>
  *
- * main.c: Initialization for TNG-DI8
+ * driver.h: Driver for TEST
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,20 +19,19 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include "configs/config.h"
+#ifndef DRIVER_H
+#define DRIVER_H
 
-#include "bricklib2/tng/tng.h"
-#include "bricklib2/logging/logging.h"
-#include "driver.h"
+#include <stdint.h>
+#include <stdbool.h>
 
-int main(void) {
-	logging_init();
-	logd("Start TNG-DI8\n\r");
+typedef struct {
 
-	driver_init();
+} Driver;
 
-	while(true) {
-		tng_tick();
-		driver_tick();
-	}
-}
+extern Driver driver;
+
+void driver_tick(void);
+void driver_init(void);
+
+#endif
