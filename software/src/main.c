@@ -25,8 +25,6 @@
 #include "bricklib2/hal/system_timer/system_timer.h"
 
 int main(void) {
-	system_timer_init(HAL_RCC_GetHCLKFreq(), SYSTEM_TIMER_FREQUENCY);
-
 	__HAL_RCC_GPIOC_CLK_ENABLE();
 	GPIO_InitTypeDef GPIO_InitStructure; 
 	GPIO_InitStructure.Pin   = GPIO_PIN_6;
