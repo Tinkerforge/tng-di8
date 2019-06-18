@@ -19,17 +19,25 @@ ENABLE_LANGUAGE(C ASM)
 
 INCLUDE_DIRECTORIES(
 	"${PROJECT_SOURCE_DIR}/src/"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/usb_stm32/"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Inc/"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/CMSIS/Device/ST/STM32F0xx/Include/"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/CMSIS/Include/"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/"
 )
 
 # find source files
 SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/main.c"
+	"${PROJECT_SOURCE_DIR}/src/communication.c"
 	"${PROJECT_SOURCE_DIR}/src/driver.c"
 
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/tng.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/usb_stm32/usb.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/usb_stm32/usbd_tfp.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/usb_stm32/usbd_conf.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/usb_stm32/usbd_desc.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/protocols/tfp/tfp.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/uartbb/uartbb.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/system_timer/system_timer.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/hal/startup/startup_stm32f0.c"
@@ -41,6 +49,12 @@ SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd_ex"
+
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c"
 )
 
 MESSAGE(STATUS "\nFound following source files:\n ${SOURCES}\n")
