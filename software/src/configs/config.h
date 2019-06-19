@@ -22,8 +22,15 @@
 #ifndef CONFIG_GENERAL_H
 #define CONFIG_GENERAL_H
 
+#define TNG_MODULE_NAME "TNG DI8"
+#define TNG_DEVICE_IDENTIFIER 201
+
 #define SYSTEM_TIMER_IS_RAMFUNC
 #define SYSTEM_TIMER_FREQUENCY 1000 // Use 1 kHz system timer
+
+#define HARDWARE_VERSION_MAJOR 1
+#define HARDWARE_VERSION_MINOR 0
+#define HARDWARE_VERSION_REVISION 0
 
 #define FIRMWARE_VERSION_MAJOR 1
 #define FIRMWARE_VERSION_MINOR 0
@@ -32,6 +39,6 @@
 #define UARTBB_TX_PIN GPIO_PIN_13
 #define UARTBB_TX_PORTC
 
-#include "stm32f0xx_hal.h"
+#include "bricklib2/tng/config_stm32f0_128kb.h"
 
 #endif

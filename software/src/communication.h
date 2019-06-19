@@ -1,4 +1,4 @@
-/* tng-di8-bricklet
+/* tng-di8
  * Copyright (C) 2019 Olaf Lüke <olaf@tinkerforge.com>
  *
  * communication.h: TFP protocol message handling

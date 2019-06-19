@@ -33,6 +33,7 @@ SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/driver.c"
 
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/tng.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/tng_communication.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/usb_stm32/usb.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/usb_stm32/usbd_tfp.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/usb_stm32/usbd_conf.c"
@@ -49,8 +50,10 @@ SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c"
-	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd"
-	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd_ex"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd_ex.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c"
 
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c"
@@ -63,7 +66,7 @@ MESSAGE(STATUS "\nFound following source files:\n ${SOURCES}\n")
 include(${CMAKE_CURRENT_SOURCE_DIR}/src/bricklib2/cmake/configs/config_define_executable.txt)
 
 # define standard compile and linker flags
-SET(LINKER_SCRIPT_NAME stm32f0_tng.ld)
+SET(LINKER_SCRIPT_NAME stm32f0_tng_firmware_with_bootloader.ld)
 include(${CMAKE_CURRENT_SOURCE_DIR}/src/bricklib2/cmake/configs/config_tng_add_standard_flags.txt)
 
 # add custom build commands
