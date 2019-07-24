@@ -1198,11 +1198,11 @@ Text GLabel 1600 3000 2    39   Output ~ 0
 LED3
 Text GLabel 1600 3100 2    39   Output ~ 0
 LED4
-Text GLabel 1600 3800 2    39   Output ~ 0
+Text GLabel 1600 4000 2    39   Output ~ 0
 LED5
 Text GLabel 1600 3900 2    39   Output ~ 0
 LED6
-Text GLabel 1600 4000 2    39   Output ~ 0
+Text GLabel 1600 3800 2    39   Output ~ 0
 LED7
 Wire Wire Line
 	1850 1150 1650 1150
@@ -1534,7 +1534,7 @@ IN3
 Text GLabel 1600 4700 2    39   Input ~ 0
 IN4
 Text GLabel 1600 4800 2    39   Input ~ 0
-IN4
+IN5
 Text GLabel 1600 4900 2    39   Input ~ 0
 IN6
 Text GLabel 1600 5000 2    39   Input ~ 0
