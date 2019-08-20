@@ -1,7 +1,7 @@
 /* tng-di8
  * Copyright (C) 2019 Olaf Lüke <olaf@tinkerforge.com>
  *
- * main.c: Initialization for TNG-DI8
+ * config_di8.h: Configuration for 8 digital inputs
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,20 +19,7 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include "configs/config.h"
+#ifndef CONFIG_DI8_H
+#define CONFIG_DI8_H
 
-#include "bricklib2/tng/tng.h"
-#include "bricklib2/logging/logging.h"
-#include "di8.h"
-
-int main(void) {
-	logging_init();
-	logd("Start TNG-DI8\n\r");
-
-	di8_init();
-
-	while(true) {
-		di8_tick();
-		tng_tick();
-	}
-}
+#endif
