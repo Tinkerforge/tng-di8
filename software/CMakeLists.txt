@@ -2,7 +2,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 SET(PROJECT_NAME tng-di8)
 SET(CHIP_FAMILY STM32F0)
-SET(CHIP STM32F072xB)
+SET(CHIP STM32F070xB)
 SET(MCU cortex-m0\ -mthumb)
 PROJECT(${PROJECT_NAME})
 
@@ -30,7 +30,7 @@ INCLUDE_DIRECTORIES(
 SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/main.c"
 	"${PROJECT_SOURCE_DIR}/src/communication.c"
-	"${PROJECT_SOURCE_DIR}/src/driver.c"
+	"${PROJECT_SOURCE_DIR}/src/di8.c"
 
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/tng.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/tng/tng_firmware.c"
@@ -56,6 +56,8 @@ SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd_ex.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c"
 
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib2/stm32cubef0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c"
@@ -75,4 +77,4 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/src/bricklib2/cmake/configs/config_tng_add_s
 include(${CMAKE_CURRENT_SOURCE_DIR}/src/bricklib2/cmake/configs/config_tng_add_standard_custom_commands.txt)
 
 # add preprocessor defines
-include(${CMAKE_CURRENT_SOURCE_DIR}/src/bricklib2/cmake/configs/config_xmc1_add_preprocessor_defines.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/src/bricklib2/cmake/configs/config_tng_add_preprocessor_defines.txt)
