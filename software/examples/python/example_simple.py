@@ -3,7 +3,7 @@
 
 HOST = "localhost"
 PORT = 4223
-UID = "XYZ" # Change XYZ to the UID of your DI8 TNG
+UID = "XYZ" # Change XYZ to the UID of your TNG DI8
 
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.tng_di8 import TNGDI8

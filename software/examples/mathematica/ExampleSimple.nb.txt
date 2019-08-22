@@ -1,0 +1,27 @@
+Needs["NETLink`"]
+LoadNETAssembly["Tinkerforge",NotebookDirectory[]<>"../../.."]
+
+host="localhost"
+port=4223
+uid="XYZ"(*Change XYZ to the UID of your TNG DI8*)
+
+(*Create IPConnection and device object*)
+ipcon=NETNew["Tinkerforge.IPConnection"]
+di8=NETNew["Tinkerforge.TNGDI8",uid,ipcon]
+ipcon@Connect[host,port]
+
+(*Get current value*)
+
+Print["Channel 0: "<>ToString[di8@GetValue[]1]]
+Print["Channel 1: "<>ToString[di8@GetValue[]2]]
+Print["Channel 2: "<>ToString[di8@GetValue[]3]]
+Print["Channel 3: "<>ToString[di8@GetValue[]4]]
+Print["Channel 4: "<>ToString[di8@GetValue[]5]]
+Print["Channel 5: "<>ToString[di8@GetValue[]6]]
+Print["Channel 6: "<>ToString[di8@GetValue[]7]]
+Print["Channel 7: "<>ToString[di8@GetValue[]8]]
+
+(*Clean up*)
+ipcon@Disconnect[]
+ReleaseNETObject[di8]
+ReleaseNETObject[ipcon]

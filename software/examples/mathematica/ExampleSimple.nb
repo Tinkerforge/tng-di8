@@ -1,0 +1,40 @@
+Notebook[{
+ Cell[
+  BoxData[{
+   RowBox[{"Needs", "[", "\"\<NETLink`\>\"", "]"}],
+   RowBox[{"LoadNETAssembly", "[", RowBox[{"\"\<Tinkerforge\>\"", ",", RowBox[{RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<../../..\>\""}]}], "]"}]
+  }], "Input"
+ ],
+ Cell[
+  BoxData[{
+   RowBox[{"host", "=", "\"\<localhost\>\""}],
+   RowBox[{"port", "=", "4223"}],
+   RowBox[{"uid", "=", "\"\<XYZ\>\"", RowBox[{"(*", "Change XYZ to the UID of your TNG DI8", "*)"}]}],
+   RowBox[{"
+"}],
+   RowBox[{"(*", "Create IPConnection and device object", "*)"}],
+   RowBox[{"ipcon", "=", RowBox[{"NETNew", "[", "\"\<Tinkerforge.IPConnection\>\"", "]"}]}],
+   RowBox[{"di8", "=", RowBox[{"NETNew", "[", RowBox[{"\"\<Tinkerforge.TNGDI8\>\"", ",", "uid", ",", "ipcon"}], "]"}]}],
+   RowBox[{"ipcon", "@", RowBox[{"Connect", "[", RowBox[{"host", ",", "port"}], "]"}]}],
+   RowBox[{"
+"}],
+   RowBox[{"(*", "Get current value", "*)"}],
+   RowBox[{"
+"}],
+   RowBox[{"Print", "[", RowBox[{"\"\<Channel 0: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"di8", "@", RowBox[{"GetValue", "[", "]"}], "1"}], "]"}]}], "]"}],
+   RowBox[{"Print", "[", RowBox[{"\"\<Channel 1: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"di8", "@", RowBox[{"GetValue", "[", "]"}], "2"}], "]"}]}], "]"}],
+   RowBox[{"Print", "[", RowBox[{"\"\<Channel 2: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"di8", "@", RowBox[{"GetValue", "[", "]"}], "3"}], "]"}]}], "]"}],
+   RowBox[{"Print", "[", RowBox[{"\"\<Channel 3: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"di8", "@", RowBox[{"GetValue", "[", "]"}], "4"}], "]"}]}], "]"}],
+   RowBox[{"Print", "[", RowBox[{"\"\<Channel 4: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"di8", "@", RowBox[{"GetValue", "[", "]"}], "5"}], "]"}]}], "]"}],
+   RowBox[{"Print", "[", RowBox[{"\"\<Channel 5: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"di8", "@", RowBox[{"GetValue", "[", "]"}], "6"}], "]"}]}], "]"}],
+   RowBox[{"Print", "[", RowBox[{"\"\<Channel 6: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"di8", "@", RowBox[{"GetValue", "[", "]"}], "7"}], "]"}]}], "]"}],
+   RowBox[{"Print", "[", RowBox[{"\"\<Channel 7: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"di8", "@", RowBox[{"GetValue", "[", "]"}], "8"}], "]"}]}], "]"}],
+   RowBox[{"
+"}],
+   RowBox[{"(*", "Clean up", "*)"}],
+   RowBox[{"ipcon", "@", RowBox[{"Disconnect", "[", "]"}]}],
+   RowBox[{"ReleaseNETObject", "[", "di8", "]"}],
+   RowBox[{"ReleaseNETObject", "[", "ipcon", "]"}]
+  }], "Input"
+ ]
+}]
