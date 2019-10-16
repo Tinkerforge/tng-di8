@@ -519,7 +519,7 @@ F 1 "TNG-Power-TOP" H 8150 4100 60  0000 C CNN
 F 2 "TNG-40-TOP" H 9500 5800 60  0001 C CNN
 F 3 "" H 9500 5800 60  0001 C CNN
 	1    8150 5150
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L tinkerforge:TNG-Power-BTM J102
@@ -530,7 +530,7 @@ F 1 "TNG-Power-BTM" H 8150 1800 60  0000 C CNN
 F 2 "TNG-40-BTM" H 9500 3500 60  0001 C CNN
 F 3 "" H 9500 3500 60  0001 C CNN
 	1    8150 2850
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L tinkerforge:Earth #PWR019
@@ -1712,17 +1712,6 @@ Wire Wire Line
 Wire Wire Line
 	1600 2800 1450 2800
 $Comp
-L tinkerforge:PDQE10 U104
-U 1 1 5D55C771
-P 6000 2800
-F 0 "U104" H 6000 3225 50  0000 C CNN
-F 1 "PDQE10" H 6000 3134 50  0000 C CNN
-F 2 "PDQE10" H 6100 2850 50  0001 C CNN
-F 3 "" H 6100 2850 50  0001 C CNN
-	1    6000 2800
-	1    0    0    -1  
-$EndComp
-$Comp
 L tinkerforge:VCCPWR #PWR0101
 U 1 1 5D55CF5F
 P 6600 2100
@@ -1744,8 +1733,8 @@ F 3 "" H 6600 3250 50  0000 C CNN
 	1    6600 3250
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6500 3000
-NoConn ~ 5500 3000
+NoConn ~ 6400 3000
+NoConn ~ 5600 3000
 $Comp
 L tinkerforge:CPs C122
 U 1 1 5D5C5D44
@@ -1760,23 +1749,20 @@ $EndComp
 $Comp
 L tinkerforge:Cs C121
 U 1 1 5D5C6A9C
-P 4700 2750
-F 0 "C121" H 4725 2825 31  0000 L CNN
-F 1 "10µF/35V" V 4600 2650 31  0000 L CNN
-F 2 "C1206" H 4700 2750 60  0001 C CNN
-F 3 "" H 4700 2750 60  0000 C CNN
-	1    4700 2750
+P 4150 2750
+F 0 "C121" H 4175 2825 31  0000 L CNN
+F 1 "10µF/35V" V 4050 2650 31  0000 L CNN
+F 2 "C1206" H 4150 2750 60  0001 C CNN
+F 3 "" H 4150 2750 60  0000 C CNN
+	1    4150 2750
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	7100 4250 7100 4450
 Wire Wire Line
-	4850 2600 4700 2600
-Wire Wire Line
 	7100 4000 7100 4050
 Wire Wire Line
-	4700 2600 4700 2650
-Connection ~ 4700 2600
+	4150 2600 4150 2650
 $Comp
 L tinkerforge:Cs C118
 U 1 1 5D7089A0
@@ -1789,26 +1775,9 @@ F 3 "" H 6600 2750 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	6500 2900 6600 2900
-Wire Wire Line
 	6600 2900 6600 2850
 Wire Wire Line
-	6500 2600 6600 2600
-Wire Wire Line
 	6600 2600 6600 2650
-$Comp
-L tinkerforge:INDUCTOR L106
-U 1 1 5D7789F2
-P 5150 2600
-F 0 "L106" H 5150 2847 60  0000 C CNN
-F 1 "4.7uH" H 5150 2741 60  0000 C CNN
-F 2 "kicad-libraries:NR4040" H 5150 2600 60  0001 C CNN
-F 3 "" H 5150 2600 60  0001 C CNN
-	1    5150 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5450 2600 5500 2600
 $Comp
 L tinkerforge:Cs C120
 U 1 1 5D90406C
@@ -1827,10 +1796,6 @@ Wire Wire Line
 Connection ~ 6600 2900
 Wire Wire Line
 	5850 3200 5350 3200
-Wire Wire Line
-	5350 3200 5350 3050
-Wire Wire Line
-	5350 2900 5500 2900
 $Comp
 L tinkerforge:Cs C119
 U 1 1 5D97699F
@@ -1851,7 +1816,6 @@ Wire Wire Line
 	5850 2150 5450 2150
 Wire Wire Line
 	5450 2150 5450 2600
-Connection ~ 5450 2600
 Wire Wire Line
 	7100 4000 7400 4000
 Wire Wire Line
@@ -1866,13 +1830,7 @@ Wire Wire Line
 	7500 4450 7500 6250
 Connection ~ 8650 5100
 Wire Wire Line
-	4700 3050 5350 3050
-Connection ~ 4700 3050
-Connection ~ 5350 3050
-Wire Wire Line
-	5350 3050 5350 2900
-Wire Wire Line
-	4700 2850 4700 3050
+	4150 2850 4150 3050
 Wire Wire Line
 	6600 3250 6600 3200
 Connection ~ 6600 3200
@@ -1880,7 +1838,7 @@ Wire Wire Line
 	6600 2150 6600 2100
 Connection ~ 6600 2150
 Text Notes 6250 3650 2    50   ~ 0
-PQDE6W-Q24-S24-D\nPDQE10-Q24-S24-D\n
+TEL10-2415 (18-36V Input)\nTEL10-2415WI (9-36V Input)\n\n
 Text GLabel 9900 800  2    39   Input ~ 0
 USB-DPA
 Text GLabel 9900 1300 2    39   Input ~ 0
@@ -2010,17 +1968,6 @@ F 3 "" H 1750 5500 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	1550 5500 1450 5500
-$Comp
-L tinkerforge:STEF01 U106
-U 1 1 5D9DEA28
-P 5900 4350
-F 0 "U106" H 5900 4965 50  0000 C CNN
-F 1 "STEF01" H 5900 4874 50  0000 C CNN
-F 2 "kicad-libraries:HTSSOP14" H 5800 4700 50  0001 C CNN
-F 3 "" H 5800 4700 50  0001 C CNN
-	1    5900 4350
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	6450 4100 6500 4100
 Wire Wire Line
@@ -2042,8 +1989,6 @@ F 3 "" H 6950 4150 60  0000 C CNN
 	1    6950 4150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5900 4900 6700 4900
 Wire Wire Line
 	7100 4900 7100 4450
 Connection ~ 7100 4450
@@ -2079,10 +2024,7 @@ F 3 "" H 4650 4100 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	5900 4900 5150 4900
-Wire Wire Line
 	4650 4900 4650 4200
-Connection ~ 5900 4900
 Wire Wire Line
 	5350 4000 5300 4000
 Wire Wire Line
@@ -2337,13 +2279,9 @@ Wire Wire Line
 	4000 4900 3850 4900
 Wire Wire Line
 	3850 4900 3850 3050
-Wire Wire Line
-	3850 3050 4700 3050
 Connection ~ 4000 4900
 Wire Wire Line
 	4000 4000 4000 2600
-Wire Wire Line
-	4000 2600 4700 2600
 Connection ~ 4000 4000
 $Comp
 L tinkerforge:LD1117 U102
@@ -2356,4 +2294,105 @@ F 3 "" H 4150 1200 60  0001 C CNN
 	1    4150 1200
 	-1   0    0    -1  
 $EndComp
+$Comp
+L tinkerforge:CONN_1 P103
+U 1 1 5DBAF746
+P 8850 4000
+F 0 "P103" H 8928 4071 60  0000 L CNN
+F 1 "PE" H 8928 3965 60  0000 L CNN
+F 2 "kicad-libraries:PE_Hook" H 8928 3912 60  0001 L CNN
+F 3 "" H 8850 4000 60  0001 C CNN
+	1    8850 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4000 8750 4000
+Wire Wire Line
+	5150 4900 5900 4900
+$Comp
+L tinkerforge:TEL10 U104
+U 1 1 5DCC0757
+P 6000 2750
+F 0 "U104" H 5975 3125 50  0000 C CNN
+F 1 "TEL10" H 5975 3034 50  0000 C CNN
+F 2 "kicad-libraries:TEL10" H 5650 3550 50  0001 C CNN
+F 3 "" H 5650 3550 50  0001 C CNN
+	1    6000 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2900 5600 2900
+Wire Wire Line
+	5450 2600 5600 2600
+Wire Wire Line
+	6400 2600 6600 2600
+Wire Wire Line
+	6400 2900 6600 2900
+$Comp
+L tinkerforge:CHOKE_CM T101
+U 1 1 5DED9798
+P 4700 2800
+F 0 "T101" V 5250 2500 70  0000 L CNN
+F 1 "744273222" V 5150 2500 70  0000 L CNN
+F 2 "kicad-libraries:WE-SL5" H 4700 3097 60  0001 C CNN
+F 3 "" H 4700 2800 60  0000 C CNN
+	1    4700 2800
+	0    1    -1   0   
+$EndComp
+Text Notes 4300 3300 0    50   ~ 0
+Alternativ 744272251
+Wire Wire Line
+	5350 2900 5350 3000
+Wire Wire Line
+	5450 2600 5100 2600
+Connection ~ 5450 2600
+Wire Wire Line
+	5350 3000 5100 3000
+Connection ~ 5350 3000
+Wire Wire Line
+	5350 3000 5350 3200
+Wire Wire Line
+	3850 3050 4150 3050
+Wire Wire Line
+	4300 3050 4150 3050
+Connection ~ 4150 3050
+Wire Wire Line
+	4150 2600 4300 2600
+Wire Wire Line
+	4150 2600 4000 2600
+Connection ~ 4150 2600
+Wire Wire Line
+	4900 3200 5100 3200
+Wire Wire Line
+	5100 3200 5100 3000
+Wire Wire Line
+	4900 2400 5100 2400
+Wire Wire Line
+	5100 2400 5100 2600
+Wire Wire Line
+	4300 2600 4300 2400
+Wire Wire Line
+	4300 2400 4500 2400
+Wire Wire Line
+	4500 3200 4300 3200
+Wire Wire Line
+	4300 3200 4300 3050
+$Comp
+L tinkerforge:STEF01 U106
+U 1 1 5DAD157A
+P 5900 4350
+F 0 "U106" H 5900 4965 50  0000 C CNN
+F 1 "STEF01" H 5900 4874 50  0000 C CNN
+F 2 "kicad-libraries:HTSSOP14" H 5900 4873 50  0001 C CNN
+F 3 "" H 5800 4700 50  0001 C CNN
+	1    5900 4350
+	-1   0    0    -1  
+$EndComp
+Connection ~ 5900 4900
+Wire Wire Line
+	5900 4900 6700 4900
+Text GLabel 4950 3900 0    50   Input ~ 0
+VO
+Wire Wire Line
+	4950 4000 4950 3900
 $EndSCHEMATC
