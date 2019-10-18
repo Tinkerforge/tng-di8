@@ -4635,7 +4635,7 @@
       (net 95 VCCPWRA))
   )
 
-  (gr_text "Was machen wir mit dem Jumper? Taster?\nTestpunkte?" (at 143.25 56.35) (layer Dwgs.User)
+  (gr_text "Was machen wir mit dem Jumper? Taster? -> Brick Taster\nTestpunkte?" (at 143.25 56.35) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_text "GND 3.3V 5V" (at 169.85 98.4 90) (layer F.SilkS)
