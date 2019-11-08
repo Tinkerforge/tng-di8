@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 23)
+    (drawings 25)
     (tracks 1519)
     (zones 0)
     (modules 128)
@@ -70,8 +70,8 @@
     (pad_drill 0.6)
     (pad_to_mask_clearance 0)
     (solder_mask_min_width 0.25)
-    (aux_axis_origin 189.8 62.5)
-    (grid_origin 189.8 62.5)
+    (aux_axis_origin 89.8 62.5)
+    (grid_origin 89.8 62.5)
     (visible_elements FFFFFF7F)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
@@ -470,7 +470,7 @@
     (pad 7 thru_hole circle (at 6.34 5.08 180) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask))
     (pad 1 thru_hole circle (at -8.9 5.08 180) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask)
       (net 105 "Net-(C120-Pad2)"))
-    (model ${KICAD_SYMBOL_DIR}/3d/unsorted/tel10wi_cp.step
+    (model unsorted/tel10wi_cp.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -499,7 +499,7 @@
       (net 94 AGNDA))
     (pad 1 smd rect (at -3.81 -3.11) (size 2.7 2.7) (layers F.Cu F.Paste F.Mask)
       (net 105 "Net-(C120-Pad2)"))
-    (model ${KICAD_SYMBOL_DIR}/3d/Inductors/WE-SL5.wrl
+    (model Inductors/WE-SL5.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1440,7 +1440,7 @@
       (net 12 Earth))
     (pad 39 smd rect (at 7.6 2.275 270) (size 0.5 2.4) (layers F.Cu F.Paste F.Mask)
       (net 12 Earth))
-    (model ${KICAD_SYMBOL_DIR}/3d/TNG-40-TOP.wrl
+    (model TNG-40-TOP.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1561,7 +1561,7 @@
       (net 12 Earth))
     (pad 39 smd rect (at 7.6 -2.275 270) (size 0.5 2.4) (layers B.Cu B.Paste B.Mask)
       (net 12 Earth))
-    (model ${KICAD_SYMBOL_DIR}/3d/TNG-40-BTM.wrl
+    (model TNG-40-BTM.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1721,7 +1721,7 @@
     (pad "" np_thru_hole circle (at -10.1 0 270) (size 0.8 0.8) (drill 0.8) (layers *.Cu *.Mask))
     (pad MNT smd rect (at 11.6 0 270) (size 2.4 5.4) (layers F.Cu F.Paste F.Mask))
     (pad MNT smd rect (at -11.6 0 270) (size 2.4 5.4) (layers F.Cu F.Paste F.Mask))
-    (model ${KICAD_SYMBOL_DIR}/3d/TNG-40-TOP.wrl
+    (model TNG-40-TOP.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1852,7 +1852,7 @@
     (pad "" np_thru_hole circle (at -10.1 0 270) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
     (pad MNT smd rect (at 11.6 0 270) (size 2.4 5.4) (layers B.Cu B.Paste B.Mask))
     (pad MNT smd rect (at -11.6 0 270) (size 2.4 5.4) (layers B.Cu B.Paste B.Mask))
-    (model ${KICAD_SYMBOL_DIR}/3d/TNG-40-BTM.wrl
+    (model TNG-40-BTM.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4635,6 +4635,10 @@
       (net 95 VCCPWRA))
   )
 
+  (gr_line (start 89.8 66) (end 89.8 147.5) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 92.8 62.5) (end 189.8 62.5) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 92.8 66) (end 89.8 66) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 92.8 66) (end 92.8 62.5) (layer Edge.Cuts) (width 0.1))
   (gr_text "Was machen wir mit dem Jumper? Taster? -> Brick Taster\nTestpunkte?" (at 143.25 56.35) (layer Dwgs.User)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -4694,8 +4698,6 @@
   )
   (gr_line (start 189.8 147.5) (end 189.8 62.5) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 89.8 147.5) (end 189.8 147.5) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 89.8 62.5) (end 89.8 147.5) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 189.8 62.5) (end 89.8 62.5) (angle 90) (layer Edge.Cuts) (width 0.1))
 
   (segment (start 156.4521 72.97598) (end 156.4521 72.1479) (width 0.3) (layer F.Cu) (net 1) (status 400000))
   (segment (start 156.4521 72.1479) (end 156.7 71.9) (width 0.3) (layer F.Cu) (net 1) (tstamp 5D32D42D))
