@@ -617,7 +617,6 @@ Wire Wire Line
 	1450 6200 1500 6200
 Wire Wire Line
 	1500 6400 1550 6400
-Connection ~ 1500 6200
 Wire Wire Line
 	1450 3600 1550 3600
 Wire Wire Line
@@ -1482,32 +1481,17 @@ Text GLabel 5800 1000 2    50   Input ~ 0
 Text GLabel 9650 700  1    50   Input ~ 0
 5VA
 $Comp
-L tinkerforge:CONN_01X02 P101
-U 1 1 5D20E1B5
-P 2050 6150
-F 0 "P101" H 2128 6191 50  0000 L CNN
-F 1 "BOOT" H 2128 6100 50  0000 L CNN
-F 2 "pin_array_2x1_smd" H 2128 6054 50  0001 L CNN
-F 3 "" H 2050 6150 50  0000 C CNN
-	1    2050 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1500 6200 1850 6200
-$Comp
 L tinkerforge:3V3 #PWR0102
 U 1 1 5D2386F9
-P 1800 6100
-F 0 "#PWR0102" H 1800 6200 40  0001 C CNN
-F 1 "3V3" H 1800 6225 40  0000 C CNN
-F 2 "" H 1800 6100 60  0000 C CNN
-F 3 "" H 1800 6100 60  0000 C CNN
-	1    1800 6100
-	0    -1   1    0   
+P 2550 6150
+F 0 "#PWR0102" H 2550 6250 40  0001 C CNN
+F 1 "3V3" H 2550 6275 40  0000 C CNN
+F 2 "" H 2550 6150 60  0000 C CNN
+F 3 "" H 2550 6150 60  0000 C CNN
+	1    2550 6150
+	-1   0    0    -1  
 $EndComp
 NoConn ~ 1450 6100
-Wire Wire Line
-	1800 6100 1850 6100
 Text GLabel 1600 4300 2    39   Input ~ 0
 IN0
 Text GLabel 1600 4400 2    39   Input ~ 0
@@ -2395,4 +2379,20 @@ Text GLabel 4950 3900 0    50   Input ~ 0
 VO
 Wire Wire Line
 	4950 4000 4950 3900
+$Comp
+L tinkerforge:SPST SW101
+U 1 1 5DE062EC
+P 2050 6200
+F 0 "SW101" H 2050 6000 50  0000 C CNN
+F 1 "BOOT" H 2050 6100 50  0000 C CNN
+F 2 "kicad-libraries:TACT-6MM-HOR" H 2050 6373 50  0001 C CNN
+F 3 "" H 2050 6200 50  0001 C CNN
+	1    2050 6200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 6200 2550 6150
+Wire Wire Line
+	1550 6200 1500 6200
+Connection ~ 1500 6200
 $EndSCHEMATC
