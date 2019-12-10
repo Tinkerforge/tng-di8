@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:di8-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1546,4 +1545,6 @@ Wire Wire Line
 	3400 1800 3400 1500
 Wire Wire Line
 	3400 1500 2400 1500
+Text Notes 3250 750  0    118  ~ 0
+Type 3 Setup
 $EndSCHEMATC
