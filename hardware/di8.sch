@@ -2311,17 +2311,6 @@ Wire Wire Line
 	6400 2600 6600 2600
 Wire Wire Line
 	6400 2900 6600 2900
-$Comp
-L tinkerforge:CHOKE_CM T101
-U 1 1 5DED9798
-P 4700 2800
-F 0 "T101" V 5250 2500 70  0000 L CNN
-F 1 "744273222" V 5150 2500 70  0000 L CNN
-F 2 "kicad-libraries:WE-SL5" H 4700 3097 60  0001 C CNN
-F 3 "" H 4700 2800 60  0000 C CNN
-	1    4700 2800
-	0    1    -1   0   
-$EndComp
 Text Notes 4300 3300 0    50   ~ 0
 Alternativ 744272251
 Wire Wire Line
@@ -2491,4 +2480,15 @@ Wire Wire Line
 Connection ~ 7150 2300
 Wire Wire Line
 	7150 2300 7400 2300
+$Comp
+L tinkerforge:CHOKE_CM T101
+U 1 1 5DED9798
+P 4700 2800
+F 0 "T101" H 4600 2500 70  0000 L CNN
+F 1 "744273222" H 4400 2300 70  0000 L CNN
+F 2 "kicad-libraries:WE-SL5" H 4700 3097 60  0001 C CNN
+F 3 "" H 4700 2800 60  0000 C CNN
+	1    4700 2800
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
