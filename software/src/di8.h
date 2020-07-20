@@ -25,26 +25,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define DI8_MEASURE_PERIOD_US 4  // 250khz
-#define DI8_BUFFER_SIZE 256
-#define DI8_DMA_BUFFER_SIZE 4096
+#define DI8_CHANNEL_NUM 8
 
 typedef struct {
-    uint64_t buffer_timestamps[256];
-    uint8_t  buffer_values[256];
-    uint8_t  buffer_start_index;
-    uint8_t  buffer_end_index;
 
-    uint8_t last_value;
-
-	uint8_t queue_type;
-	uint32_t queue_period;
-    bool queue_callback_enabled;
-
-    uint8_t dma_buffer[DI8_DMA_BUFFER_SIZE];
-    uint16_t dma_buffer_start_index;
-    uint64_t dma_buffer_counter;
-    uint64_t dma_buffer_start_time;
 } DI8;
 
 extern DI8 di8;
