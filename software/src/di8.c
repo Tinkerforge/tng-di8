@@ -66,5 +66,5 @@ void di8_tick(void) {
 		tng_led_channel_set(i, value & (1 << i));
 	}
 
-	tng_led_status_set(0, 0, 0);
+//	tng_led_status_set(0, 0, 0);
 }
