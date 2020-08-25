@@ -16,17 +16,17 @@ ipcon.connect(HOST, PORT,
 
 ipcon.on(Tinkerforge.IPConnection.CALLBACK_CONNECTED,
     function (connectReason) {
-        // Get current value
-        di8.getValue(
-            function (value) {
-                console.log('Channel 0: ' + value[0]);
-                console.log('Channel 1: ' + value[1]);
-                console.log('Channel 2: ' + value[2]);
-                console.log('Channel 3: ' + value[3]);
-                console.log('Channel 4: ' + value[4]);
-                console.log('Channel 5: ' + value[5]);
-                console.log('Channel 6: ' + value[6]);
-                console.log('Channel 7: ' + value[7]);
+        // Get current values
+        di8.getValues(
+            function (values) {
+                console.log('Channel 0: ' + values[0]);
+                console.log('Channel 1: ' + values[1]);
+                console.log('Channel 2: ' + values[2]);
+                console.log('Channel 3: ' + values[3]);
+                console.log('Channel 4: ' + values[4]);
+                console.log('Channel 5: ' + values[5]);
+                console.log('Channel 6: ' + values[6]);
+                console.log('Channel 7: ' + values[7]);
             },
             function (error) {
                 console.log('Error: ' + error);

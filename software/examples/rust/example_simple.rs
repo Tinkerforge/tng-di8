@@ -13,17 +13,17 @@ fn main() -> Result<(), Box<dyn Error>> {
     ipcon.connect((HOST, PORT)).recv()??; // Connect to brickd.
                                           // Don't use device before ipcon is connected.
 
-    // Get current value.
-    let value = di8.get_value().recv()?;
+    // Get current values.
+    let values = di8.get_values().recv()?;
 
-    println!("Channel 0: {}", value[0]);
-    println!("Channel 1: {}", value[1]);
-    println!("Channel 2: {}", value[2]);
-    println!("Channel 3: {}", value[3]);
-    println!("Channel 4: {}", value[4]);
-    println!("Channel 5: {}", value[5]);
-    println!("Channel 6: {}", value[6]);
-    println!("Channel 7: {}", value[7]);
+    println!("Channel 0: {}", values[0]);
+    println!("Channel 1: {}", values[1]);
+    println!("Channel 2: {}", values[2]);
+    println!("Channel 3: {}", values[3]);
+    println!("Channel 4: {}", values[4]);
+    println!("Channel 5: {}", values[5]);
+    println!("Channel 6: {}", values[6]);
+    println!("Channel 7: {}", values[7]);
 
     println!("Press enter to exit.");
     let mut _input = String::new();

@@ -12,17 +12,17 @@ function matlab_example_simple()
     ipcon.connect(HOST, PORT); % Connect to brickd
     % Don't use device before ipcon is connected
 
-    % Get current value
-    value = di8.getValue();
+    % Get current values
+    values = di8.getValues();
 
-    fprintf('Channel 0: %i\n', value(1));
-    fprintf('Channel 1: %i\n', value(2));
-    fprintf('Channel 2: %i\n', value(3));
-    fprintf('Channel 3: %i\n', value(4));
-    fprintf('Channel 4: %i\n', value(5));
-    fprintf('Channel 5: %i\n', value(6));
-    fprintf('Channel 6: %i\n', value(7));
-    fprintf('Channel 7: %i\n', value(8));
+    fprintf('Channel 0: %i\n', values(1));
+    fprintf('Channel 1: %i\n', values(2));
+    fprintf('Channel 2: %i\n', values(3));
+    fprintf('Channel 3: %i\n', values(4));
+    fprintf('Channel 4: %i\n', values(5));
+    fprintf('Channel 5: %i\n', values(6));
+    fprintf('Channel 6: %i\n', values(7));
+    fprintf('Channel 7: %i\n', values(8));
 
     input('Press key to exit\n', 's');
     ipcon.disconnect();

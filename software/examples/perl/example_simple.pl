@@ -14,17 +14,17 @@ my $di8 = Tinkerforge::TNGDI8->new(&UID, $ipcon); # Create device object
 $ipcon->connect(&HOST, &PORT); # Connect to brickd
 # Don't use device before ipcon is connected
 
-# Get current value
-my $value = $di8->get_value();
+# Get current values
+my $values = $di8->get_values();
 
-print "Channel 0: " . @{$value}[0] . "\n";
-print "Channel 1: " . @{$value}[1] . "\n";
-print "Channel 2: " . @{$value}[2] . "\n";
-print "Channel 3: " . @{$value}[3] . "\n";
-print "Channel 4: " . @{$value}[4] . "\n";
-print "Channel 5: " . @{$value}[5] . "\n";
-print "Channel 6: " . @{$value}[6] . "\n";
-print "Channel 7: " . @{$value}[7] . "\n";
+print "Channel 0: " . @{$values}[0] . "\n";
+print "Channel 1: " . @{$values}[1] . "\n";
+print "Channel 2: " . @{$values}[2] . "\n";
+print "Channel 3: " . @{$values}[3] . "\n";
+print "Channel 4: " . @{$values}[4] . "\n";
+print "Channel 5: " . @{$values}[5] . "\n";
+print "Channel 6: " . @{$values}[6] . "\n";
+print "Channel 7: " . @{$values}[7] . "\n";
 
 print "Press key to exit\n";
 <STDIN>;

@@ -16,17 +16,17 @@ di8 = TNGDI8.new UID, ipcon # Create device object
 ipcon.connect HOST, PORT # Connect to brickd
 # Don't use device before ipcon is connected
 
-# Get current value
-value = di8.get_value
+# Get current values
+values = di8.get_values
 
-puts "Channel 0: #{value[0]}"
-puts "Channel 1: #{value[1]}"
-puts "Channel 2: #{value[2]}"
-puts "Channel 3: #{value[3]}"
-puts "Channel 4: #{value[4]}"
-puts "Channel 5: #{value[5]}"
-puts "Channel 6: #{value[6]}"
-puts "Channel 7: #{value[7]}"
+puts "Channel 0: #{values[0]}"
+puts "Channel 1: #{values[1]}"
+puts "Channel 2: #{values[2]}"
+puts "Channel 3: #{values[3]}"
+puts "Channel 4: #{values[4]}"
+puts "Channel 5: #{values[5]}"
+puts "Channel 6: #{values[6]}"
+puts "Channel 7: #{values[7]}"
 
 puts 'Press key to exit'
 $stdin.gets

@@ -3,5 +3,5 @@
 
 uid=XYZ # Change XYZ to the UID of your TNG DI8
 
-# Get current value
-tinkerforge call di8-tng $uid get-value
+# Get current values
+tinkerforge call di8-tng $uid get-values

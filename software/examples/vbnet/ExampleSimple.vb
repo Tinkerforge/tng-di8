@@ -13,17 +13,17 @@ Module ExampleSimple
         ipcon.Connect(HOST, PORT) ' Connect to brickd
         ' Don't use device before ipcon is connected
 
-        ' Get current value
-        Dim value As Boolean() = di8.GetValue()
+        ' Get current values
+        Dim values As Boolean() = di8.GetValues()
 
-        Console.WriteLine("Channel 0: " + value(0).ToString())
-        Console.WriteLine("Channel 1: " + value(1).ToString())
-        Console.WriteLine("Channel 2: " + value(2).ToString())
-        Console.WriteLine("Channel 3: " + value(3).ToString())
-        Console.WriteLine("Channel 4: " + value(4).ToString())
-        Console.WriteLine("Channel 5: " + value(5).ToString())
-        Console.WriteLine("Channel 6: " + value(6).ToString())
-        Console.WriteLine("Channel 7: " + value(7).ToString())
+        Console.WriteLine("Channel 0: " + values(0).ToString())
+        Console.WriteLine("Channel 1: " + values(1).ToString())
+        Console.WriteLine("Channel 2: " + values(2).ToString())
+        Console.WriteLine("Channel 3: " + values(3).ToString())
+        Console.WriteLine("Channel 4: " + values(4).ToString())
+        Console.WriteLine("Channel 5: " + values(5).ToString())
+        Console.WriteLine("Channel 6: " + values(6).ToString())
+        Console.WriteLine("Channel 7: " + values(7).ToString())
 
         Console.WriteLine("Press key to exit")
         Console.ReadLine()

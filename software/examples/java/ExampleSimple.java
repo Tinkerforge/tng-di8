@@ -17,17 +17,17 @@ public class ExampleSimple {
 		ipcon.connect(HOST, PORT); // Connect to brickd
 		// Don't use device before ipcon is connected
 
-		// Get current value
-		boolean[] value = di8.getValue(); // Can throw com.tinkerforge.TimeoutException
+		// Get current values
+		boolean[] values = di8.getValues(); // Can throw com.tinkerforge.TimeoutException
 
-		System.out.println("Channel 0: " + value[0]);
-		System.out.println("Channel 1: " + value[1]);
-		System.out.println("Channel 2: " + value[2]);
-		System.out.println("Channel 3: " + value[3]);
-		System.out.println("Channel 4: " + value[4]);
-		System.out.println("Channel 5: " + value[5]);
-		System.out.println("Channel 6: " + value[6]);
-		System.out.println("Channel 7: " + value[7]);
+		System.out.println("Channel 0: " + values[0]);
+		System.out.println("Channel 1: " + values[1]);
+		System.out.println("Channel 2: " + values[2]);
+		System.out.println("Channel 3: " + values[3]);
+		System.out.println("Channel 4: " + values[4]);
+		System.out.println("Channel 5: " + values[5]);
+		System.out.println("Channel 6: " + values[6]);
+		System.out.println("Channel 7: " + values[7]);
 
 		System.out.println("Press key to exit"); System.in.read();
 		ipcon.disconnect();

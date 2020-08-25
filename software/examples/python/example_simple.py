@@ -15,17 +15,17 @@ if __name__ == "__main__":
     ipcon.connect(HOST, PORT) # Connect to brickd
     # Don't use device before ipcon is connected
 
-    # Get current value
-    value = di8.get_value()
+    # Get current values
+    values = di8.get_values()
 
-    print("Channel 0: " + str(value[0]))
-    print("Channel 1: " + str(value[1]))
-    print("Channel 2: " + str(value[2]))
-    print("Channel 3: " + str(value[3]))
-    print("Channel 4: " + str(value[4]))
-    print("Channel 5: " + str(value[5]))
-    print("Channel 6: " + str(value[6]))
-    print("Channel 7: " + str(value[7]))
+    print("Channel 0: " + str(values[0]))
+    print("Channel 1: " + str(values[1]))
+    print("Channel 2: " + str(values[2]))
+    print("Channel 3: " + str(values[3]))
+    print("Channel 4: " + str(values[4]))
+    print("Channel 5: " + str(values[5]))
+    print("Channel 6: " + str(values[6]))
+    print("Channel 7: " + str(values[7]))
 
     input("Press key to exit\n") # Use raw_input() in Python 2
     ipcon.disconnect()

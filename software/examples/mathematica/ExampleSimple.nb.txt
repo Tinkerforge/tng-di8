@@ -10,16 +10,16 @@ ipcon=NETNew["Tinkerforge.IPConnection"]
 di8=NETNew["Tinkerforge.TNGDI8",uid,ipcon]
 ipcon@Connect[host,port]
 
-(*Get current value*)
+(*Get current values*)
 
-Print["Channel 0: "<>ToString[di8@GetValue[]1]]
-Print["Channel 1: "<>ToString[di8@GetValue[]2]]
-Print["Channel 2: "<>ToString[di8@GetValue[]3]]
-Print["Channel 3: "<>ToString[di8@GetValue[]4]]
-Print["Channel 4: "<>ToString[di8@GetValue[]5]]
-Print["Channel 5: "<>ToString[di8@GetValue[]6]]
-Print["Channel 6: "<>ToString[di8@GetValue[]7]]
-Print["Channel 7: "<>ToString[di8@GetValue[]8]]
+Print["Channel 0: "<>ToString[di8@GetValues[]1]]
+Print["Channel 1: "<>ToString[di8@GetValues[]2]]
+Print["Channel 2: "<>ToString[di8@GetValues[]3]]
+Print["Channel 3: "<>ToString[di8@GetValues[]4]]
+Print["Channel 4: "<>ToString[di8@GetValues[]5]]
+Print["Channel 5: "<>ToString[di8@GetValues[]6]]
+Print["Channel 6: "<>ToString[di8@GetValues[]7]]
+Print["Channel 7: "<>ToString[di8@GetValues[]8]]
 
 (*Clean up*)
 ipcon@Disconnect[]

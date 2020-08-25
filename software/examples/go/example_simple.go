@@ -18,17 +18,17 @@ func main() {
 	defer ipcon.Disconnect()
 	// Don't use device before ipcon is connected.
 
-	// Get current value.
-	value, _ := di8.GetValue()
+	// Get current values.
+	values, _ := di8.GetValues()
 
-	fmt.Printf("Channel 0: \n", value[0])
-	fmt.Printf("Channel 1: \n", value[1])
-	fmt.Printf("Channel 2: \n", value[2])
-	fmt.Printf("Channel 3: \n", value[3])
-	fmt.Printf("Channel 4: \n", value[4])
-	fmt.Printf("Channel 5: \n", value[5])
-	fmt.Printf("Channel 6: \n", value[6])
-	fmt.Printf("Channel 7: \n", value[7])
+	fmt.Printf("Channel 0: \n", values[0])
+	fmt.Printf("Channel 1: \n", values[1])
+	fmt.Printf("Channel 2: \n", values[2])
+	fmt.Printf("Channel 3: \n", values[3])
+	fmt.Printf("Channel 4: \n", values[4])
+	fmt.Printf("Channel 5: \n", values[5])
+	fmt.Printf("Channel 6: \n", values[6])
+	fmt.Printf("Channel 7: \n", values[7])
 
 	fmt.Print("Press enter to exit.")
 	fmt.Scanln()

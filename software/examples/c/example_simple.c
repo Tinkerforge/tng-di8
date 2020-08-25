@@ -23,21 +23,21 @@ int main(void) {
 	}
 	// Don't use device before ipcon is connected
 
-	// Get current value
-	bool value[8];
-	if(di8_get_value(&di8, value) < 0) {
-		fprintf(stderr, "Could not get value, probably timeout\n");
+	// Get current values
+	bool values[8];
+	if(di8_get_values(&di8, values) < 0) {
+		fprintf(stderr, "Could not get values, probably timeout\n");
 		return 1;
 	}
 
-	printf("Channel 0: %s\n", value[0] ? "true" : "false");
-	printf("Channel 1: %s\n", value[1] ? "true" : "false");
-	printf("Channel 2: %s\n", value[2] ? "true" : "false");
-	printf("Channel 3: %s\n", value[3] ? "true" : "false");
-	printf("Channel 4: %s\n", value[4] ? "true" : "false");
-	printf("Channel 5: %s\n", value[5] ? "true" : "false");
-	printf("Channel 6: %s\n", value[6] ? "true" : "false");
-	printf("Channel 7: %s\n", value[7] ? "true" : "false");
+	printf("Channel 0: %s\n", values[0] ? "true" : "false");
+	printf("Channel 1: %s\n", values[1] ? "true" : "false");
+	printf("Channel 2: %s\n", values[2] ? "true" : "false");
+	printf("Channel 3: %s\n", values[3] ? "true" : "false");
+	printf("Channel 4: %s\n", values[4] ? "true" : "false");
+	printf("Channel 5: %s\n", values[5] ? "true" : "false");
+	printf("Channel 6: %s\n", values[6] ? "true" : "false");
+	printf("Channel 7: %s\n", values[7] ? "true" : "false");
 
 	printf("Press key to exit\n");
 	getchar();

@@ -24,7 +24,7 @@ var
   e: TExample;
 
 procedure TExample.Execute;
-var value: TArray0To7OfBoolean;
+var values: TArray0To7OfBoolean;
 begin
   { Create IP connection }
   ipcon := TIPConnection.Create;
@@ -36,17 +36,17 @@ begin
   ipcon.Connect(HOST, PORT);
   { Don't use device before ipcon is connected }
 
-  { Get current value }
-  value := di8.GetValue;
+  { Get current values }
+  values := di8.GetValues;
 
-  WriteLn(Format('Channel 0: %d', [value[0]]));
-  WriteLn(Format('Channel 1: %d', [value[1]]));
-  WriteLn(Format('Channel 2: %d', [value[2]]));
-  WriteLn(Format('Channel 3: %d', [value[3]]));
-  WriteLn(Format('Channel 4: %d', [value[4]]));
-  WriteLn(Format('Channel 5: %d', [value[5]]));
-  WriteLn(Format('Channel 6: %d', [value[6]]));
-  WriteLn(Format('Channel 7: %d', [value[7]]));
+  WriteLn(Format('Channel 0: %d', [values[0]]));
+  WriteLn(Format('Channel 1: %d', [values[1]]));
+  WriteLn(Format('Channel 2: %d', [values[2]]));
+  WriteLn(Format('Channel 3: %d', [values[3]]));
+  WriteLn(Format('Channel 4: %d', [values[4]]));
+  WriteLn(Format('Channel 5: %d', [values[5]]));
+  WriteLn(Format('Channel 6: %d', [values[6]]));
+  WriteLn(Format('Channel 7: %d', [values[7]]));
 
   WriteLn('Press key to exit');
   ReadLn;

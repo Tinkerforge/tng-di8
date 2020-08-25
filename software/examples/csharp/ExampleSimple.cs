@@ -15,17 +15,17 @@ class Example
 		ipcon.Connect(HOST, PORT); // Connect to brickd
 		// Don't use device before ipcon is connected
 
-		// Get current value
-		bool[] value = di8.GetValue();
+		// Get current values
+		bool[] values = di8.GetValues();
 
-		Console.WriteLine("Channel 0: " + value[0]);
-		Console.WriteLine("Channel 1: " + value[1]);
-		Console.WriteLine("Channel 2: " + value[2]);
-		Console.WriteLine("Channel 3: " + value[3]);
-		Console.WriteLine("Channel 4: " + value[4]);
-		Console.WriteLine("Channel 5: " + value[5]);
-		Console.WriteLine("Channel 6: " + value[6]);
-		Console.WriteLine("Channel 7: " + value[7]);
+		Console.WriteLine("Channel 0: " + values[0]);
+		Console.WriteLine("Channel 1: " + values[1]);
+		Console.WriteLine("Channel 2: " + values[2]);
+		Console.WriteLine("Channel 3: " + values[3]);
+		Console.WriteLine("Channel 4: " + values[4]);
+		Console.WriteLine("Channel 5: " + values[5]);
+		Console.WriteLine("Channel 6: " + values[6]);
+		Console.WriteLine("Channel 7: " + values[7]);
 
 		Console.WriteLine("Press enter to exit");
 		Console.ReadLine();

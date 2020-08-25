@@ -11,17 +11,17 @@ function octave_example_simple()
     ipcon.connect(HOST, PORT); % Connect to brickd
     % Don't use device before ipcon is connected
 
-    % Get current value
-    value = di8.getValue();
+    % Get current values
+    values = di8.getValues();
 
-    fprintf("Channel 0: %d\n", value(1));
-    fprintf("Channel 1: %d\n", value(2));
-    fprintf("Channel 2: %d\n", value(3));
-    fprintf("Channel 3: %d\n", value(4));
-    fprintf("Channel 4: %d\n", value(5));
-    fprintf("Channel 5: %d\n", value(6));
-    fprintf("Channel 6: %d\n", value(7));
-    fprintf("Channel 7: %d\n", value(8));
+    fprintf("Channel 0: %d\n", values(1));
+    fprintf("Channel 1: %d\n", values(2));
+    fprintf("Channel 2: %d\n", values(3));
+    fprintf("Channel 3: %d\n", values(4));
+    fprintf("Channel 4: %d\n", values(5));
+    fprintf("Channel 5: %d\n", values(6));
+    fprintf("Channel 6: %d\n", values(7));
+    fprintf("Channel 7: %d\n", values(8));
 
     input("Press key to exit\n", "s");
     ipcon.disconnect();

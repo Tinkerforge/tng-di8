@@ -1,6 +1,6 @@
 # Change XYZ to the UID of your TNG DI8
 
 setup:
-	# Get current value
-	subscribe to tinkerforge/response/di8_tng/XYZ/get_value
-	publish '' to tinkerforge/request/di8_tng/XYZ/get_value
+	# Get current values
+	subscribe to tinkerforge/response/di8_tng/XYZ/get_values
+	publish '' to tinkerforge/request/di8_tng/XYZ/get_values
